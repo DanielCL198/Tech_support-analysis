@@ -1,5 +1,6 @@
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 
 /**
  * Keep a record of how many times each word was entered by users.
@@ -20,6 +21,15 @@ public class WordCounter
         counts = new HashMap<>();
     }
     
+    public void printWordCount()
+    {
+        System.out.println(" Word Usage Counts ");
+        for (Map.Entry<String, Integer> entry : counts.entrySet()) {
+            System.out.println("Word: " + entry.getKey() + ", Count: " + entry.getValue());
+            
+        }
+        System.out.println("--------------");
+    }
     /**
      * Update the usage count of all words in input.
      * @param input A set of words entered by the user.
